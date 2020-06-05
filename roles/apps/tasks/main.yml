@@ -1,0 +1,41 @@
+- homebrew:
+    update_homebrew: yes
+
+- homebrew_cask:
+    upgrade_all: yes
+
+- homebrew_cask:
+    name: alfred
+    state: present
+
+- homebrew_cask:
+    name: firefox
+    state: present
+
+- homebrew_cask:
+    name: brave-browser
+    state: present
+
+- homebrew_cask:
+    name: keepassxc
+    state: present
+
+- homebrew_cask:
+    name: jetbrains-toolbox
+    state: present
+
+- homebrew_cask:
+    name: lulu
+    state: present
+
+- homebrew_cask:
+    name: visual-studio-code
+    state: present
+
+- homebrew_cask:
+    name: iterm2
+    state: present
+
+- homebrew:
+    name: nvm,php
+    state: present
