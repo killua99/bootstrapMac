@@ -5,6 +5,10 @@
     upgrade_all: yes
 
 - homebrew_cask:
+    name: java
+    state: present
+
+- homebrew_cask:
     name: alfred
     state: present
 
