@@ -1,7 +1,7 @@
 - name: Downloading Dots
   unarchive:
     src: https://github.com/killua99/dots/archive/master.zip
-    dest: "{{ ansible_user_dir }}/dots"
+    dest: "{{ ansible_user_dir }}"
     remote_src: yes
 
 - name: Installing dots
