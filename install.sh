@@ -76,11 +76,10 @@ if [[ STATUS_XCODE == 2 ]]; then
   xcode-select --install
 fi
 
-[ -f "/usr/local/lib" ] && sudo chmod -R 775 /usr/local/lib
-[ -f "/usr/local/share" ] && sudo chmod -R 775 /usr/local/share
-[ -f "/usr/local/Homebrew" ] && sudo chmod -R 775 /usr/local/Homebrew
-[ -f "/usr/local/var/homebrew" ] && sudo chmod -R 775 /usr/local/var/homebrew
-[ -f "/usr/local/Cellar" ] && sudo chmod -R 775 /usr/local/Cellar
+sudo chown -R "$USER":admin /usr/local
+[ -f "/Library/Caches/Homebrew" ] && sudo chown -R "$USER":admin /Library/Caches/Homebrew
+sudo chmod -R 775 /usr/local
+[ -f "/Library/Caches/Homebrew" ] && sudo chmod -R 775 /Library/Caches/Homebrew
 
 [ ! -x "$(which brew)" ] && /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
