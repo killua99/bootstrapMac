@@ -8,6 +8,13 @@ while [[ $# -gt 0 ]]; do
   key="$1"
 
   case "$key" in
+
+    -l|--local)
+
+      LOCAL=1
+
+      shift
+      ;;
     -h|--help)
       cat <<EOF
 
@@ -46,6 +53,18 @@ EOF
 done
 
 set -- "${POSITIONAL[@]}"
+
+if [[ -z ${LOCAL} ]]; then
+
+  TMPFILE=`mktemp`
+
+  wget https://github.com/killua99/bootstrapMac/archive/master.zip -O ${TMPFILE}
+  unzip -d ${TMPDIR} ${TMPFILE}
+
+  ${TMPDIR}/bootstrapMac-master/install.sh -l
+  exit 0
+
+fi
 
 xcode-select --install
 
