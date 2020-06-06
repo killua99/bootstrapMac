@@ -74,14 +74,13 @@ if [[ STATUS_XCODE == 2 ]]; then
   xcode-select --install
 fi
 
-sudo chmod -R 775 /usr/local/lib
-sudo chmod -R 775 /usr/local/share
-sudo chmod -R 775 /usr/local/Homebrew
-sudo chmod -R 775 /usr/local/var/homebrew
+[ -f "/usr/local/lib" ] && sudo chmod -R 775 /usr/local/lib
+[ -f "/usr/local/share" ] && sudo chmod -R 775 /usr/local/share
+[ -f "/usr/local/Homebrew" ] && sudo chmod -R 775 /usr/local/Homebrew
+[ -f "/usr/local/var/homebrew" ] && sudo chmod -R 775 /usr/local/var/homebrew
+[ -f "/usr/local/Cellar" ] && sudo chmod -R 775 /usr/local/Cellar
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-
-sudo chmod -R 775 /usr/local/Cellar
 
 brew install ansible
 
