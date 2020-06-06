@@ -9,53 +9,54 @@
 - homebrew_cask:
     name: alfred
     state: present
-    install_options: 'appdir=/Applications'
+    install_options: 'force,appdir=/Applications'
 
 - homebrew_cask:
     name: firefox
     state: present
-    install_options: 'appdir=/Applications'
+    install_options: 'force,appdir=/Applications'
 
 - homebrew_cask:
     name: brave-browser
     state: present
-    install_options: 'appdir=/Applications'
+    install_options: 'force,appdir=/Applications'
 
 - homebrew_cask:
     name: keepassxc
     state: present
-    install_options: 'appdir=/Applications'
+    install_options: 'force,appdir=/Applications'
 
 - homebrew_cask:
     name: jetbrains-toolbox
     state: present
-    install_options: 'appdir=/Applications'
+    install_options: 'force,appdir=/Applications'
 
 - homebrew_cask:
     name: lulu
     state: present
-    install_options: 'appdir=/Applications'
+    install_options: 'force,appdir=/Applications'
 
 - homebrew_cask:
     name: visual-studio-code
     state: present
-    install_options: 'appdir=/Applications'
+    install_options: 'force,appdir=/Applications'
 
 - homebrew_cask:
     name: iterm2
     state: present
-    install_options: 'appdir=/Applications'
+    install_options: 'force,appdir=/Applications'
 
 - homebrew_cask:
     name: spotify
     state: present
-    install_options: 'appdir=/Applications'
+    install_options: 'force,appdir=/Applications'
 
 - homebrew_cask:
     name: keepingyouawake
     state: present
-    install_options: 'appdir=/Applications'
+    install_options: 'force,appdir=/Applications'
 
 - homebrew:
     name: nvm,php
     state: present
+    options: force
