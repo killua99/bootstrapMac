@@ -7,10 +7,6 @@
     install_options: force
 
 - homebrew_cask:
-    install_options: force
-    upgrade_all: yes
-
-- homebrew_cask:
     name: alfred
     state: present
     install_options: 'appdir=/Applications'
