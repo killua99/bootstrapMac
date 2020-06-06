@@ -76,6 +76,8 @@ fi
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
+sudo chown -R $(whoami) /usr/local/var/homebrew
+
 brew install ansible
 
 ansible-playbook bootstrap.yml
