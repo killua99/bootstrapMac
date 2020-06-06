@@ -1,6 +1,5 @@
 ---
 
-- name: apps
-  hosts: localhost
+- hosts: localhost
   roles:
     - { role: '../roles/apps' }

@@ -80,8 +80,11 @@ fi
 [ -f "/usr/local/var/homebrew" ] && sudo chmod -R 775 /usr/local/var/homebrew
 [ -f "/usr/local/Cellar" ] && sudo chmod -R 775 /usr/local/Cellar
 
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
-brew install ansible
+BREW_STATUS=`which -s brew`
+[ -z ${BREW_STATUS} ] && /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
+PLAYBOOK=`which -s ansible-playbook`
+[ -z ${PLAYBOOK} ] && brew install ansible
 
 ansible-playbook bootstrap.yml
