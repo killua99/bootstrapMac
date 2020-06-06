@@ -36,6 +36,14 @@
     name: iterm2
     state: present
 
+- homebrew_cask:
+    name: spotify
+    state: present
+
+- homebrew_cask:
+    name: keepingyouawake
+    state: present
+
 - homebrew:
     name: nvm,php
     state: present
