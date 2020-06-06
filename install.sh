@@ -76,12 +76,9 @@ if [[ STATUS_XCODE == 2 ]]; then
   xcode-select --install
 fi
 
-sudo chown -R "$USER":admin /usr/local
-[ -f "/Library/Caches/Homebrew" ] && sudo chown -R "$USER":admin /Library/Caches/Homebrew
-sudo chmod -R 775 /usr/local
-[ -f "/Library/Caches/Homebrew" ] && sudo chmod -R 775 /Library/Caches/Homebrew
-
 [ ! -x "$(which brew)" ] && /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+[ -x "$(which brew)" ] && sudo chown -R $(whoami) $(brew --prefix)/*`
+[ -x "$(which brew)" ] && sudo chmod -R 775 $(brew --prefix)/*`
 
 [ ! -x "$(which ansible-playbook)" ] && brew install ansible
 
