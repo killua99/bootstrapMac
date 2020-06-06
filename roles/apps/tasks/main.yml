@@ -1,62 +1,75 @@
-- homebrew:
+- name: Update homebrew
+  homebrew:
     update_homebrew: yes
 
-- homebrew_cask:
+- name: Cask Java
+  homebrew_cask:
     name: java
     state: present
     install_options: force
 
-- homebrew_cask:
+- name: Alfred
+  homebrew_cask:
     name: alfred
     state: present
     install_options: 'force,appdir=/Applications'
 
-- homebrew_cask:
+- name: Firefox
+  homebrew_cask:
     name: firefox
     state: present
     install_options: 'force,appdir=/Applications'
 
-- homebrew_cask:
+- name: Brave Browser
+  homebrew_cask:
     name: brave-browser
     state: present
     install_options: 'force,appdir=/Applications'
 
-- homebrew_cask:
+- name: KeePassXC
+  homebrew_cask:
     name: keepassxc
     state: present
     install_options: 'force,appdir=/Applications'
 
-- homebrew_cask:
+- name: JetBrains Toolbox
+  homebrew_cask:
     name: jetbrains-toolbox
     state: present
     install_options: 'force,appdir=/Applications'
 
-- homebrew_cask:
+- name: Firewall LuLu
+  homebrew_cask:
     name: lulu
     state: present
     install_options: 'force,appdir=/Applications'
 
-- homebrew_cask:
+- name: Visual Studio Code
+  homebrew_cask:
     name: visual-studio-code
     state: present
     install_options: 'force,appdir=/Applications'
 
-- homebrew_cask:
+- name: iTerm2
+  homebrew_cask:
     name: iterm2
     state: present
     install_options: 'force,appdir=/Applications'
 
-- homebrew_cask:
+- name: Spotify
+  homebrew_cask:
     name: spotify
     state: present
     install_options: 'force,appdir=/Applications'
 
-- homebrew_cask:
+- name: Keeping You Awake (caffeine)
+  homebrew_cask:
     name: keepingyouawake
     state: present
     install_options: 'force,appdir=/Applications'
 
-- homebrew:
-    name: nvm,php
+- name: Formulas; nvm, php, fish
+  homebrew:
+    name: nvm,php,fish
     state: present
     options: force

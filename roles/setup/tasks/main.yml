@@ -1,0 +1,10 @@
+- name: Downloading Dots
+  unarchive:
+    src: https://github.com/killua99/dots/archive/master.zip
+    dest: "{{ HOME }}/dots"
+    remote_src: yes
+
+- name: Installing dots
+  command:
+    chdir: "{{ HOME }}/dots"
+    cmd: "./install.sh"
