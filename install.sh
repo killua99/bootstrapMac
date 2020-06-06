@@ -68,9 +68,9 @@ if [[ -z ${LOCAL} ]]; then
 
 fi
 
-(xcode-select -p 1>/dev/null;echo $?)
+STATUS_XCODE=(xcode-select -p 1>/dev/null;echo $?)
 
-if [[ (xcode-select -p 1>/dev/null;echo $?) == 2 ]]; then
+if [[ STATUS_XCODE == 2 ]]; then
   xcode-select --install
 fi
 
