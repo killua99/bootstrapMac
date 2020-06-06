@@ -2,13 +2,13 @@
     update_homebrew: yes
 
 - homebrew_cask:
-    install_options: force
-    upgrade_all: yes
-
-- homebrew_cask:
     name: java
     state: present
-    install_options: 'appdir=/Applications'
+    install_options: force
+
+- homebrew_cask:
+    install_options: force
+    upgrade_all: yes
 
 - homebrew_cask:
     name: alfred
