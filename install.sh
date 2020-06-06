@@ -58,6 +58,8 @@ if [[ -z ${LOCAL} ]]; then
 
   TMPFILE=`mktemp`
 
+  rm -rf ${TMPDIR}bootstrapMac-master
+
   wget https://github.com/killua99/bootstrapMac/archive/master.zip -O ${TMPFILE}
   unzip -d ${TMPDIR} ${TMPFILE}
 
@@ -66,7 +68,9 @@ if [[ -z ${LOCAL} ]]; then
 
 fi
 
-xcode-select --install
+if [[ (xcode-select -p 1>/dev/null;echo $?) == 2 ]]; then
+  xcode-select --install
+fi
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
