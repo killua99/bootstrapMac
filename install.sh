@@ -81,6 +81,8 @@ sudo chmod -R 775 /usr/local/var/homebrew
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
+sudo chmod -R 775 /usr/local/Cellar
+
 brew install ansible
 
 ansible-playbook bootstrap.yml
