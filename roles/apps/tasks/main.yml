@@ -68,6 +68,12 @@
     state: present
     install_options: 'force,appdir=/Applications'
 
+- name: Karabiner Elements
+  homebrew_cask:
+    name: karabiner-elements
+    state: present
+    install_options: 'force,appdir=/Applications'
+
 - name: Formulas; nvm, php, fish
   homebrew:
     name: nvm,php,fish
