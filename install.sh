@@ -74,6 +74,8 @@ if [[ STATUS_XCODE == 2 ]]; then
   xcode-select --install
 fi
 
+sudo chmod -R 775 /usr/local/Homebrew
+
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 brew install ansible
