@@ -1,4 +1,4 @@
-!#/usr/bin/env bash
+#!/usr/bin/env bash
 
 set -e
 
@@ -61,7 +61,7 @@ if [[ -z ${LOCAL} ]]; then
   wget https://github.com/killua99/bootstrapMac/archive/master.zip -O ${TMPFILE}
   unzip -d ${TMPDIR} ${TMPFILE}
 
-  ${TMPDIR}/bootstrapMac-master/install.sh -l
+  ${TMPDIR}bootstrapMac-master/install.sh -l
   exit 0
 
 fi
