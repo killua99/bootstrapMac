@@ -44,6 +44,6 @@
     cmd: "./install.sh"
 
 - name: Installing node stable
-  command:
+  shell:
     chdir: "{{ ansible_user_dir }}"
     cmd: "nvm install stable && nvm alias default stable"
