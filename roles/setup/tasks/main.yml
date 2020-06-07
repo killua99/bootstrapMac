@@ -43,6 +43,13 @@
     chdir: "{{ ansible_user_dir }}/dots"
     cmd: "./install.sh"
 
+- name: Setup fish as default shell
+  shell:
+    chdir: "{{ ansible_user_dir }}"
+    cmd: curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+  args:
+    creates: "{{ ansible_user_dir }}/.nvm/nvm.sh"
+
 - name: Installing node stable
   shell:
     chdir: "{{ ansible_user_dir }}"
