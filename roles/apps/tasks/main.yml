@@ -118,10 +118,13 @@
     options: force
 
 - name: Yubico
-  homebrew: yubico-pam,ykman
-  state: present
-  options: force
+  homebrew:
+    name:  yubico-pam,ykman
+    state: present
+    options: force
 
 - name: Tools
   homebrew:
     name: curl,composer,noti,vim,wget,thefuck
+    state: present
+    options: force
