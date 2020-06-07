@@ -78,6 +78,6 @@
 
 - name: Formulas; nvm, php, fish, tmux
   homebrew:
-    name: nvm,php,fish, tmux
+    name: nvm,php,fish,tmux
     state: present
     options: force
