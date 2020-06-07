@@ -1,7 +1,7 @@
 ---
 
 - name: Setup fish as default shell
-  command:
+  shell:
     chdir: "{{ ansible_user_dir }}"
     cmd: chsh -s `which fish`
 
