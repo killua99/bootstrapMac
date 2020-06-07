@@ -26,4 +26,5 @@
 
 - name: Installing dots
   command:
+    chdir: "{{ ansible_user_dir }}"
     cmd: "{{ ansible_user_dir }}/dots/install.sh"
