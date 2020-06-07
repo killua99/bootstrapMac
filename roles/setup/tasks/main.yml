@@ -21,6 +21,7 @@
 - name: Move dots folder
   file:
     force: yes
+    state: directory
     dest: "{{ ansible_user_dir }}/dots"
     src: "{{ ansible_user_dir }}/dots-master"
 
