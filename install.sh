@@ -70,6 +70,8 @@ if [[ -z ${LOCAL} ]]; then
 
 fi
 
+cd $HOME
+
 STATUS_XCODE=`xcode-select -p 1>/dev/null; printf $?`
 
 if [[ STATUS_XCODE == 2 ]]; then

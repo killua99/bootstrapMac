@@ -5,16 +5,25 @@
     repo: https://github.com/gpakosz/.tmux.git
     dest: "{{ ansible_user_dir }}/.tmux"
 
-- name: Linking tmux conf
-  command:
-    cmd: "ln -s -f {{ ansible_user_dir }}/.tmux/.tmux.conf {{ ansible_user_dir }}/.tmux.conf"
-
 - name: Downloading Dots
   unarchive:
     src: https://github.com/killua99/dots/archive/master.zip
     dest: "{{ ansible_user_dir }}"
     remote_src: yes
 
+- name: Linking tmux conf
+  file:
+    force: yes
+    state: link
+    src: "{{ ansible_user_dir }}/.tmux/.tmux.conf"
+    dest: "{{ ansible_user_dir }}/.tmux.conf"
+
+- name: Move dots folder
+  file:
+    force: yes
+    dest: "{{ ansible_user_dir }}/dots"
+    src: "{{ ansible_user_dir }}/dots-master"
+
 - name: Installing dots
   command:
-    cmd: "{{ ansible_user_dir }}/dots-master/install.sh"
+    cmd: "{{ ansible_user_dir }}/dots/install.sh"
