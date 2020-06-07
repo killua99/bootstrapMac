@@ -6,13 +6,14 @@
     cmd: chsh -s `which fish`
 
 - name: Setup fisher
-  command:
+  shell:
     chdir: "{{ ansible_user_dir }}"
+    cmd: curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
 
 - name: Fisher packages
-  command:
+  shell:
     chdir: "{{ ansible_user_dir }}"
-    cmd: fisher add jethrokuan/z oh-my-fish/theme-bobthefish franciscolourenco/done fabioantunes/nvm
+    cmd: fish fisher add jethrokuan/z oh-my-fish/theme-bobthefish franciscolourenco/done fabioantunes/nvm
 
 - name: Downloading tmux conf
   git:
