@@ -1,0 +1,21 @@
+---
+
+- name: NPM prettier
+  npm:
+    name: prettier
+    global: yes
+
+- name: NPM prettier stylelint
+  npm:
+    name: prettier-stylelint
+    global: yes
+
+- name: NPM stylelint
+  npm:
+    name: stylelint
+    global: yes
+
+- name: NPM undollar
+  npm:
+    name: undollar
+    global: yes

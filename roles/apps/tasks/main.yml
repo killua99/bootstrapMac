@@ -28,6 +28,12 @@
     state: present
     install_options: 'force,appdir=/Applications'
 
+- name: Chrome
+  homebrew_cask:
+    name: google-chrome
+    state: present
+    install_options: 'force,appdir=/Applications'
+
 - name: Docker
   homebrew_cask:
     name: docker
@@ -58,6 +64,18 @@
     state: present
     install_options: 'force,appdir=/Applications'
 
+- name: Quicklook CSV
+  homebrew_cask:
+    name: quicklook-csv
+    state: present
+    install_options: 'force,appdir=/Applications'
+
+- name: Quicklook JSON
+  homebrew_cask:
+    name: quicklook-json
+    state: present
+    install_options: 'force,appdir=/Applications'
+
 - name: iTerm2
   homebrew_cask:
     name: iterm2
@@ -80,6 +98,17 @@
   homebrew_cask:
     name: karabiner-elements
     state: present
+
+- name: Spectacle
+  homebrew_cask:
+    name: spectacle
+    state: present
+    install_options: 'force,appdir=/Applications'
+
+- name: Unarchiver
+  homebrew_cask:
+    name: the-unarchiver
+    state: present
     install_options: 'force,appdir=/Applications'
 
 - name: Formulas; nvm, php, fish, tmux
@@ -87,3 +116,12 @@
     name: nvm,php,fish,tmux
     state: present
     options: force
+
+- name: Yubico
+  homebrew: yubico-pam,ykman
+  state: present
+  options: force
+
+- name: Tools
+  homebrew:
+    name: curl,composer,noti,vim,wget,thefuck

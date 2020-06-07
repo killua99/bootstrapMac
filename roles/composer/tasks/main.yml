@@ -1,0 +1,13 @@
+---
+
+- name: "Composer: prestissimo"
+  composer:
+    command: require
+    arguments: hirak/prestissim
+    global_command: yes
+
+- name: "Composer: PHP CS Fixer"
+  composer:
+    command: require
+    arguments: friendsofphp/php-cs-fixer
+    global_command: yes

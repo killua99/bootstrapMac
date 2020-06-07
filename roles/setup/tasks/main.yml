@@ -1,5 +1,19 @@
 ---
 
+- name: Setup fish as default shell
+  command:
+    chdir: "{{ ansible_user_dir }}"
+    cmd: chsh -s $(which fish)
+
+- name: Setup fisher
+  command:
+    chdir: "{{ ansible_user_dir }}"
+
+- name: Fisher packages
+  command:
+    chdir: "{{ ansible_user_dir }}"
+    cmd: fisher add jethrokuan/z oh-my-fish/theme-bobthefish franciscolourenco/done fabioantunes/nvm
+
 - name: Downloading tmux conf
   git:
     repo: https://github.com/gpakosz/.tmux.git
@@ -27,3 +41,8 @@
   command:
     chdir: "{{ ansible_user_dir }}/dots"
     cmd: "./install.sh"
+
+- name: Installing node stable
+  command:
+    chdir: "{{ ansible_user_dir }}"
+    cmd: "nvm install stable && nvm alias default stable"

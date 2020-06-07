@@ -2,3 +2,5 @@
 
 - import_playbook: books/apps.yml
 - import_playbook: books/setup.yml
+- import_playbook: books/composer.yml
+- import_playbook: books/npm.yml
