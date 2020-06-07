@@ -3,7 +3,7 @@
 - name: Setup fish as default shell
   command:
     chdir: "{{ ansible_user_dir }}"
-    cmd: chsh -s $(which fish)
+    cmd: chsh -s `which fish`
 
 - name: Setup fisher
   command:
