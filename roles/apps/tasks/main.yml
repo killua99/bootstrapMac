@@ -1,3 +1,5 @@
+---
+
 - name: Update homebrew
   homebrew:
     update_homebrew: yes
@@ -74,8 +76,8 @@
     state: present
     install_options: 'force,appdir=/Applications'
 
-- name: Formulas; nvm, php, fish
+- name: Formulas; nvm, php, fish, tmux
   homebrew:
-    name: nvm,php,fish
+    name: nvm,php,fish, tmux
     state: present
     options: force

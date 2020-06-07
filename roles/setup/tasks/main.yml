@@ -1,3 +1,14 @@
+---
+
+- name: Downloading tmux conf
+  git:
+    src: https://github.com/gpakosz/.tmux.git
+    dest: "{{ ansible_user_dir }}/.tmux"
+
+- name: Linking tmux conf
+  command:
+    cmd: "ln -s -f {{ ansible_user_dir }}/.tmux/.tmux.conf {{ ansible_user_dir }}/.tmux.conf"
+
 - name: Downloading Dots
   unarchive:
     src: https://github.com/killua99/dots/archive/master.zip
