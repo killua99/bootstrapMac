@@ -19,11 +19,9 @@
     dest: "{{ ansible_user_dir }}/.tmux.conf"
 
 - name: Move dots folder
-  file:
-    force: yes
-    state: directory
-    dest: "{{ ansible_user_dir }}/dots"
-    src: "{{ ansible_user_dir }}/dots-master"
+  command:
+    chdir: "{{ ansible_user_dir }}"
+    cmd: mv dots-master dots
 
 - name: Installing dots
   command:
