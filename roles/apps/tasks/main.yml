@@ -28,6 +28,12 @@
     state: present
     install_options: 'force,appdir=/Applications'
 
+- name: Docker
+  homebrew_cask:
+    name: docker
+    state: present
+    install_options: 'force,appdir=/Applications'
+
 - name: KeePassXC
   homebrew_cask:
     name: keepassxc
