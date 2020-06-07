@@ -13,7 +13,7 @@
 - name: Fisher packages
   shell:
     chdir: "{{ ansible_user_dir }}"
-    cmd: fish fisher add jethrokuan/z oh-my-fish/theme-bobthefish franciscolourenco/done fabioantunes/nvm
+    cmd: fish -c fisher add jethrokuan/z oh-my-fish/theme-bobthefish franciscolourenco/done fabioantunes/nvm
 
 - name: Downloading tmux conf
   git:
