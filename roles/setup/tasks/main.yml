@@ -1,5 +1,17 @@
 ---
 
+- name: Installing nvm
+  shell:
+    chdir: "{{ ansible_user_dir }}"
+    cmd: curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+  args:
+    creates: "{{ ansible_user_dir }}/.nvm/nvm.sh"
+
+- name: Installing node stable
+  shell:
+    chdir: "{{ ansible_user_dir }}"
+    cmd: ".nvm/nvm-exec install stable && .nvm/nvm-exec alias default stable"
+
 - name: Setup fish as default shell
   shell:
     chdir: "{{ ansible_user_dir }}"
@@ -42,15 +54,3 @@
   command:
     chdir: "{{ ansible_user_dir }}/dots"
     cmd: "./install.sh"
-
-- name: Installing nvm
-  shell:
-    chdir: "{{ ansible_user_dir }}"
-    cmd: curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
-  args:
-    creates: "{{ ansible_user_dir }}/.nvm/nvm.sh"
-
-- name: Installing node stable
-  shell:
-    chdir: "{{ ansible_user_dir }}"
-    cmd: "nvm install stable && nvm alias default stable"
