@@ -60,7 +60,7 @@ if [[ -z ${LOCAL} ]]; then
 
   rm -rf ${TMPDIR}bootstrapMac-master
 
-  wget -q https://github.com/killua99/bootstrapMac/archive/master.zip -O ${TMPFILE}
+  curl https://github.com/killua99/bootstrapMac/archive/master.zip --ouput ${TMPFILE}
   unzip -qq -d ${TMPDIR} ${TMPFILE}
 
   cd ${TMPDIR}bootstrapMac-master/
