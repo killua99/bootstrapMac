@@ -65,6 +65,8 @@ if [[ -z ${LOCAL} ]]; then
   curl -L https://github.com/killua99/bootstrapMac/archive/master.zip --output master.zip
   unzip -qq -d ${HOME}/ master.zip
 
+  rm -rf .bootstrapMac
+
   mv bootstrapMac-master .bootstrapMac
 
   cd .bootstrapMac
