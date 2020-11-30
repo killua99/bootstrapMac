@@ -101,7 +101,7 @@
     install_options: 'cask'
 
 - name: Fonts
-  homebrew:
+  homebrew_cask:
     name: font-hack-nerd-font,font-jetbrainsmono-nerd-font,font-source-code-pro-for-powerline
     state: present
     install_options: 'cask'
@@ -110,18 +110,16 @@
   homebrew:
     name: insomnia
     state: present
-    install_options: 'cask'
-
 
 - name: Third cask apps.
   homebrew:
-    name: itscal,menumeters,libreoffice,vagrant,virtualbox,slack,aerial,mutagen-beta,stay,skitch,vlc
+    name: itsycal,menumeters,libreoffice,vagrant,virtualbox,slack,aerial,mutagen-beta,stay,skitch,vlc
     state: present
     install_options: 'cask'
 
 - name: Third apps.
   homebrew:
-    name: go,git,cowsay,terminal-notifier,fortune,noti,
+    name: go,git,cowsay,terminal-notifier,fortune,noti
     state: present
 
 - name: Formulas; php, fish, tmux
