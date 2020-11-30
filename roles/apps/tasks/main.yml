@@ -105,7 +105,7 @@
     state: present
     install_options: 'force'
 
-- name: Formulas; nvm, php, fish, tmux
+- name: Formulas; php, fish, tmux
   homebrew:
     name: php,fish,tmux
     state: present
@@ -119,6 +119,6 @@
 
 - name: Tools
   homebrew:
-    name: curl,composer,noti,vim,wget,thefuck
+    name: curl,composer,noti,vim,wget,thefuck,bash
     state: present
     options: force
