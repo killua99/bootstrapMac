@@ -1,56 +1,55 @@
 ---
 
 - name: Installing nvm
-  shell:
-    chdir: "{{ ansible_user_dir }}"
-    cmd: curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+  shell: >
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
   args:
-    creates: "{{ ansible_user_dir }}/.nvm/nvm.sh"
+    creates: "{{ ansible_env.HOME }}/.nvm/nvm.sh"
 
-- name: Installing node stable
+- name: Installing node lts
   shell:
-    chdir: "{{ ansible_user_dir }}"
+    chdir: "{{ ansible_env.HOME }}"
     cmd: ".nvm/nvm-exec install --lts && .nvm/nvm-exec alias default lts/*"
 
 - name: Setup fish as default shell
   shell:
-    chdir: "{{ ansible_user_dir }}"
+    chdir: "{{ ansible_env.HOME }}"
     cmd: chsh -s `which fish`
 
 - name: Setup fisher
   shell:
-    chdir: "{{ ansible_user_dir }}"
+    chdir: "{{ ansible_env.HOME }}"
     cmd: curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
 
 - name: Fisher packages
   shell:
-    chdir: "{{ ansible_user_dir }}"
+    chdir: "{{ ansible_env.HOME }}"
     cmd: fish -c fisher add jethrokuan/z oh-my-fish/theme-bobthefish franciscolourenco/done fabioantunes/nvm
 
 - name: Downloading tmux conf
   git:
     repo: https://github.com/gpakosz/.tmux.git
-    dest: "{{ ansible_user_dir }}/.tmux"
+    dest: "{{ ansible_env.HOME }}/.tmux"
 
 - name: Downloading Dots
   unarchive:
     src: https://github.com/killua99/dots/archive/master.zip
-    dest: "{{ ansible_user_dir }}"
+    dest: "{{ ansible_env.HOME }}"
     remote_src: yes
 
 - name: Linking tmux conf
   file:
     force: yes
     state: link
-    src: "{{ ansible_user_dir }}/.tmux/.tmux.conf"
-    dest: "{{ ansible_user_dir }}/.tmux.conf"
+    src: "{{ ansible_env.HOME }}/.tmux/.tmux.conf"
+    dest: "{{ ansible_env.HOME }}/.tmux.conf"
 
 - name: Move dots folder
   command:
-    chdir: "{{ ansible_user_dir }}"
+    chdir: "{{ ansible_env.HOME }}"
     cmd: mv dots-master dots
 
 - name: Installing dots
   command:
-    chdir: "{{ ansible_user_dir }}/dots"
+    chdir: "{{ ansible_env.HOME }}/dots"
     cmd: "./install.sh"

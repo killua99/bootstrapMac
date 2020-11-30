@@ -8,31 +8,28 @@
   homebrew_cask:
     name: alfred
     state: present
-    install_options: 'force'
 
 - name: Firefox
   homebrew_cask:
     name: firefox
     state: present
-    install_options: 'force'
 
 - name: Brave Browser
   homebrew:
     name: brave-browser
     state: present
-    install_options: 'force,cask'
+    install_options: 'cask'
 
 - name: Chrome
   homebrew:
     name: google-chrome
     state: present
-    install_options: 'force,cask'
+    install_options: 'cask'
 
 - name: Docker
   homebrew_cask:
     name: docker
     state: present
-    install_options: 'force'
 
 - name: KeePassXC
   homebrew_cask:
@@ -44,7 +41,7 @@
   homebrew:
     name: jetbrains-toolbox
     state: present
-    install_options: 'force,cask'
+    install_options: 'cask'
 
 - name: Firewall LuLu
   homebrew_cask:
@@ -56,43 +53,40 @@
   homebrew:
     name: visual-studio-code
     state: present
-    install_options: 'force,cask'
+    install_options: 'cask'
 
 - name: Quicklook CSV
   homebrew:
     name: quicklook-csv
     state: present
-    install_options: 'force,cask'
+    install_options: 'cask'
 
 - name: Quicklook JSON
   homebrew:
     name: quicklook-json
     state: present
-    install_options: 'force,cask'
+    install_options: 'cask'
 
 - name: iTerm2
   homebrew_cask:
     name: iterm2
     state: present
-    install_options: 'force'
 
 - name: Spotify
   homebrew_cask:
     name: spotify
     state: present
-    install_options: 'force'
 
 - name: Keeping You Awake (caffeine)
   homebrew_cask:
     name: keepingyouawake
     state: present
-    install_options: 'force'
 
 - name: Karabiner Elements
   homebrew:
     name: karabiner-elements
     state: present
-    install_options: 'force,cask'
+    install_options: 'cask'
 
 - name: Spectacle
   homebrew_cask:
@@ -104,22 +98,43 @@
   homebrew:
     name: the-unarchiver
     state: present
-    install_options: 'force,cask'
+    install_options: 'cask'
+
+- name: Fonts
+  homebrew:
+    name: font-hack-nerd-font,font-jetbrainsmono-nerd-font,font-source-code-pro-for-powerline
+    state: present
+    install_options: 'cask'
+
+- name: Insomnia
+  homebrew:
+    name: insomnia
+    state: present
+    install_options: 'cask'
+
+
+- name: Third cask apps.
+  homebrew:
+    name: itscal,menumeters,libreoffice,vagrant,virtualbox,slack,aerial,mutagen-beta,stay,skitch,vlc
+    state: present
+    install_options: 'cask'
+
+- name: Third apps.
+  homebrew:
+    name: go,git,cowsay,terminal-notifier,fortune,noti,
+    state: present
 
 - name: Formulas; php, fish, tmux
   homebrew:
     name: php,fish,tmux
     state: present
-    options: force
 
 - name: Yubico
   homebrew:
     name:  yubico-pam,ykman
     state: present
-    options: force
 
 - name: Tools
   homebrew:
     name: curl,composer,noti,vim,wget,thefuck,bash
     state: present
-    options: force
