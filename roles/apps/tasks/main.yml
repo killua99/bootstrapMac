@@ -4,12 +4,6 @@
   homebrew:
     update_homebrew: yes
 
-- name: Cask Java
-  homebrew_cask:
-    name: java
-    state: present
-    install_options: force
-
 - name: Alfred
   homebrew_cask:
     name: alfred
