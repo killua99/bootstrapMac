@@ -20,7 +20,7 @@
   homebrew:
     name: brave-browser
     state: present
-    install_options: 'force,install_options'
+    install_options: 'force,cask'
 
 - name: Chrome
   homebrew_cask:
