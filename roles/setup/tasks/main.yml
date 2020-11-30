@@ -10,7 +10,7 @@
 - name: Installing node stable
   shell:
     chdir: "{{ ansible_user_dir }}"
-    cmd: ".nvm/nvm-exec install ---lts && .nvm/nvm-exec alias default lts/*"
+    cmd: ".nvm/nvm-exec install --lts && .nvm/nvm-exec alias default lts/*"
 
 - name: Setup fish as default shell
   shell:

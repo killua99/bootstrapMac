@@ -23,10 +23,10 @@
     install_options: 'force,cask'
 
 - name: Chrome
-  homebrew_cask:
+  homebrew:
     name: google-chrome
     state: present
-    install_options: 'force'
+    install_options: 'force,cask'
 
 - name: Docker
   homebrew_cask:
@@ -41,10 +41,10 @@
     install_options: 'force'
 
 - name: JetBrains Toolbox
-  homebrew_cask:
+  homebrew:
     name: jetbrains-toolbox
     state: present
-    install_options: 'force'
+    install_options: 'force,cask'
 
 - name: Firewall LuLu
   homebrew_cask:
@@ -53,22 +53,22 @@
     install_options: 'force'
 
 - name: Visual Studio Code
-  homebrew_cask:
+  homebrew:
     name: visual-studio-code
     state: present
-    install_options: 'force'
+    install_options: 'force,cask'
 
 - name: Quicklook CSV
-  homebrew_cask:
+  homebrew:
     name: quicklook-csv
     state: present
-    install_options: 'force'
+    install_options: 'force,cask'
 
 - name: Quicklook JSON
-  homebrew_cask:
+  homebrew:
     name: quicklook-json
     state: present
-    install_options: 'force'
+    install_options: 'force,cask'
 
 - name: iTerm2
   homebrew_cask:
@@ -89,9 +89,10 @@
     install_options: 'force'
 
 - name: Karabiner Elements
-  homebrew_cask:
+  homebrew:
     name: karabiner-elements
     state: present
+    install_options: 'force,cask'
 
 - name: Spectacle
   homebrew_cask:
@@ -100,10 +101,10 @@
     install_options: 'force'
 
 - name: Unarchiver
-  homebrew_cask:
+  homebrew:
     name: the-unarchiver
     state: present
-    install_options: 'force'
+    install_options: 'force,cask'
 
 - name: Formulas; php, fish, tmux
   homebrew:
