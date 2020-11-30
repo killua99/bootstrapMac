@@ -14,85 +14,85 @@
   homebrew_cask:
     name: alfred
     state: present
-    install_options: 'force,appdir=/Applications'
+    install_options: 'force'
 
 - name: Firefox
   homebrew_cask:
     name: firefox
     state: present
-    install_options: 'force,appdir=/Applications'
+    install_options: 'force'
 
 - name: Brave Browser
   homebrew_cask:
     name: brave-browser
     state: present
-    install_options: 'force,appdir=/Applications'
+    install_options: 'force'
 
 - name: Chrome
   homebrew_cask:
     name: google-chrome
     state: present
-    install_options: 'force,appdir=/Applications'
+    install_options: 'force'
 
 - name: Docker
   homebrew_cask:
     name: docker
     state: present
-    install_options: 'force,appdir=/Applications'
+    install_options: 'force'
 
 - name: KeePassXC
   homebrew_cask:
     name: keepassxc
     state: present
-    install_options: 'force,appdir=/Applications'
+    install_options: 'force'
 
 - name: JetBrains Toolbox
   homebrew_cask:
     name: jetbrains-toolbox
     state: present
-    install_options: 'force,appdir=/Applications'
+    install_options: 'force'
 
 - name: Firewall LuLu
   homebrew_cask:
     name: lulu
     state: present
-    install_options: 'force,appdir=/Applications'
+    install_options: 'force'
 
 - name: Visual Studio Code
   homebrew_cask:
     name: visual-studio-code
     state: present
-    install_options: 'force,appdir=/Applications'
+    install_options: 'force'
 
 - name: Quicklook CSV
   homebrew_cask:
     name: quicklook-csv
     state: present
-    install_options: 'force,appdir=/Applications'
+    install_options: 'force'
 
 - name: Quicklook JSON
   homebrew_cask:
     name: quicklook-json
     state: present
-    install_options: 'force,appdir=/Applications'
+    install_options: 'force'
 
 - name: iTerm2
   homebrew_cask:
     name: iterm2
     state: present
-    install_options: 'force,appdir=/Applications'
+    install_options: 'force'
 
 - name: Spotify
   homebrew_cask:
     name: spotify
     state: present
-    install_options: 'force,appdir=/Applications'
+    install_options: 'force'
 
 - name: Keeping You Awake (caffeine)
   homebrew_cask:
     name: keepingyouawake
     state: present
-    install_options: 'force,appdir=/Applications'
+    install_options: 'force'
 
 - name: Karabiner Elements
   homebrew_cask:
@@ -103,13 +103,13 @@
   homebrew_cask:
     name: spectacle
     state: present
-    install_options: 'force,appdir=/Applications'
+    install_options: 'force'
 
 - name: Unarchiver
   homebrew_cask:
     name: the-unarchiver
     state: present
-    install_options: 'force,appdir=/Applications'
+    install_options: 'force'
 
 - name: Formulas; nvm, php, fish, tmux
   homebrew:
