@@ -56,18 +56,18 @@ set -- "${POSITIONAL[@]}"
 
 if [[ -z ${LOCAL} ]]; then
 
-  cd ${TMPDIR}
+  cd $HOME
 
-  rm -rf master.zip
+  rm -rf ${TMPDIR}master.zip
 
   rm -rf ${TMPDIR}bootstrapMac-master
 
   curl -L https://github.com/killua99/bootstrapMac/archive/master.zip --output master.zip
   unzip -qq -d ${TMPDIR} master.zip
 
-  cd ${TMPDIR}bootstrapMac-master/
+  mv bootstrapMac-master .bootstrapMac
 
-  ${TMPDIR}bootstrapMac-master/install.sh -l
+  ${HOME}/.bootstrapMac/install.sh -l
   exit 0
 
 fi
