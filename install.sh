@@ -62,7 +62,7 @@ if [[ -z ${LOCAL} ]]; then
 
   rm -rf ${TMPDIR}bootstrapMac-master
 
-  curl https://github.com/killua99/bootstrapMac/archive/master.zip --output master.zip
+  curl -L https://github.com/killua99/bootstrapMac/archive/master.zip --output master.zip
   unzip -qq -d ${TMPDIR} master.zip
 
   cd ${TMPDIR}bootstrapMac-master/
