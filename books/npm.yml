@@ -1,5 +1,7 @@
 ---
 
-- hosts: localhost
+- name: NPM apps
+  hosts: localhost
+  connection: local
   roles:
     - { role: '../roles/npm' }

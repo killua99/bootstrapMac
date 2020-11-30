@@ -1,5 +1,7 @@
 ---
 
-- hosts: localhost
+- name: Composer fixer
+  hosts: localhost
+  connection: local
   roles:
     - { role: '../roles/composer' }

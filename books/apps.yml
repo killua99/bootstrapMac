@@ -1,6 +1,8 @@
 ---
 
-- hosts: localhost
+- name: App installer
+  hosts: localhost
+  connection: local
   ignore_errors: yes
   roles:
     - { role: '../roles/apps' }
