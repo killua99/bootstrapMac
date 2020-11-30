@@ -56,12 +56,14 @@ set -- "${POSITIONAL[@]}"
 
 if [[ -z ${LOCAL} ]]; then
 
-  TMPFILE=`mktemp`
+  cd ${TMPDIR}
+
+  rm -rf master.zip
 
   rm -rf ${TMPDIR}bootstrapMac-master
 
-  curl https://github.com/killua99/bootstrapMac/archive/master.zip --output ${TMPFILE}
-  unzip -qq -d ${TMPDIR} ${TMPFILE}
+  curl https://github.com/killua99/bootstrapMac/archive/master.zip --output master.zip
+  unzip -qq -d ${TMPDIR} master.zip
 
   cd ${TMPDIR}bootstrapMac-master/
 
