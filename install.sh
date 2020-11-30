@@ -67,6 +67,8 @@ if [[ -z ${LOCAL} ]]; then
 
   mv bootstrapMac-master .bootstrapMac
 
+  cd .bootstrapMac
+
   ${HOME}/.bootstrapMac/install.sh -l
   exit 0
 
