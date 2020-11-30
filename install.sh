@@ -58,12 +58,12 @@ if [[ -z ${LOCAL} ]]; then
 
   cd $HOME
 
+  # Removing legacy way of installing.
   rm -rf ${TMPDIR}master.zip
-
   rm -rf ${TMPDIR}bootstrapMac-master
 
   curl -L https://github.com/killua99/bootstrapMac/archive/master.zip --output master.zip
-  unzip -qq -d ${TMPDIR} master.zip
+  unzip -qq -d ${HOME} master.zip
 
   mv bootstrapMac-master .bootstrapMac
 
