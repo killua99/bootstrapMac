@@ -1,5 +1,6 @@
 ---
 
 - hosts: localhost
+  ignore_errors: yes
   roles:
     - { role: '../roles/apps' }
