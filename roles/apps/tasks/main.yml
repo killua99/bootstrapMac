@@ -17,10 +17,10 @@
     install_options: 'force'
 
 - name: Brave Browser
-  homebrew_cask:
+  homebrew:
     name: brave-browser
     state: present
-    install_options: 'force'
+    install_options: 'force,install_options'
 
 - name: Chrome
   homebrew_cask:
